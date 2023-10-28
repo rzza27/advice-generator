@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import dice from '../public/images/icon-dice.svg';
+import divider from '../public/images/pattern-divider-desktop.svg'
 
 function App() {
   const [advice, setAdvice] = useState([]);
@@ -22,7 +23,7 @@ function App() {
         &ldquo;{advice.advice}&rdquo;
       </blockquote>
       <img
-        src='/public/images/pattern-divider-desktop.svg'
+        src={divider}
         alt='divider'
         className='mt-6'
       />
