@@ -22,19 +22,19 @@ function App() {
   }, []);
 
   return (
-    <>
+    <div className='relative flex flex-col justify-center items-center bg-darkGrayishBlue min-w-[250px] sm:max-w-[65%] mx-auto p-8  rounded-lg'>
       {isLoading ? (
         <Loader />
       ) : (
         <Advice advice={advice} fetchAdvice={fetchAdvice} />
       )}
-    </>
+    </div>
   );
 }
 
 function Advice({ advice, fetchAdvice }) {
   return (
-    <div className='relative flex flex-col justify-center items-center bg-darkGrayishBlue sm:max-w-[65%] mx-auto p-8  rounded-lg'>
+   <>
       <h3 className='text-neonGreen tracking-[5px] text-sm'>
         ADVICE #{advice.id}
       </h3>
@@ -48,14 +48,14 @@ function Advice({ advice, fetchAdvice }) {
       >
         <img src={dice} alt='dice' />
       </button>
-    </div>
+    </>
   );
 }
 
 function Loader() {
   return (
     <div>
-      <img className='w-10' src={loaderGif} alt="loading image" />
+      <img className='w-20' src={loaderGif} alt="loading image" />
     </div>
   );
 }
