@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react';
 import dice from '../public/images/icon-dice.svg';
 import divider from '../public/images/pattern-divider-desktop.svg';
+import loaderGif from '../public/Rolling-1s-200px.gif'
 
 function App() {
   const [advice, setAdvice] = useState([]);
@@ -54,7 +55,7 @@ function Advice({ advice, fetchAdvice }) {
 function Loader() {
   return (
     <div>
-      <p className='text-lightCyan text-4xl'>Loading...</p>
+      <img className='w-10' src={loaderGif} alt="loading image" />
     </div>
   );
 }
